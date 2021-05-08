@@ -9,12 +9,9 @@
 // @license      GPL-3.0
 // @icon         https://www.google.com/s2/favicons?domain=pixiv.net
 // @grant        none
-// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // @updateURL    https://raw.githubusercontent.com/solact/pixiv-faview/main/pixiv-faview.user.js
 // @noframes
 // ==/UserScript==
-
-/* global $ */
 
 (async () => {
     'use strict';
@@ -115,7 +112,6 @@
                 }
                 // bookmarksCount = parseInt(profileAllJson.body.bookmarkCount.public.illust) + parseInt(profileAllJson.body.bookmarkCount.public.novel);
                 bookmarksCount = 0;
-                // $bookmarksNode = $('<ul>');
                 $bookmarksNode = document.createElement('ul');
                 for (const [id, val] of Object.entries(profileIdsJsonBodyWorks)) {
                     if (val.bookmarkData) {
@@ -128,7 +124,6 @@
                         const $li = document.createElement('li');
                         $li.appendChild($a);
                         $bookmarksNode.appendChild($li);
-                        // $bookmarksNode.append($('<li>').append($('<a>').attr('href', url).text(val.title).css('color', 'red')));
                         bookmarksCount++;
                     }
                 }
@@ -154,7 +149,7 @@
 
         // wait for target and rewrite it
         debugMsg('wait for target');
-        for (const $elem of document.querySelectorAll("h2")) { // $('h2')
+        for (const $elem of document.querySelectorAll("h2")) {
             if ($elem.innerHTML == i18n('illusts_manga') || $elem.innerHTML == i18n('works')) {
                 // add fav count like Illustrations and Manga(Bookmarks: xxx)
                 $elem.innerHTML += `(${i18n('favs')}: ${bookmarksCount})`;
@@ -163,7 +158,6 @@
                 const insertAfter = (referenceNode, newNode) => {
                     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
                 };
-                // $($elem).parent().parent().parent().after($bookmarksNode);
                 insertAfter($elem.parentNode.parentNode.parentNode, $bookmarksNode);
 
                 debugMsg('rewriting');
