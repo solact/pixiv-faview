@@ -1,15 +1,16 @@
 // ==UserScript==
-// @name         Pixiv Faview
-// @namespace    https://solact.blogspot.com/
-// @version      0.1
-// @description  Can view how many favs you have on a specific artist.
-// @author       Solact
-// @include      https://www.pixiv.net/*
-// @match        https://www.pixiv.net/*
-// @license      GPL-3.0
-// @icon         https://www.google.com/s2/favicons?domain=pixiv.net
-// @grant        none
-// @updateURL    https://raw.githubusercontent.com/solact/pixiv-faview/main/pixiv-faview.user.js
+// @name           Pixiv Faview
+// @namespace      https://solact.blogspot.com/
+// @version        0.1
+// @description    Can view how many favs you have on a specific artist.
+// @description:ja 作者ごとの作品一覧ページで、あなたがお気に入りに追加した作品の数とリストを表示します。
+// @author         Solact
+// @include        https://www.pixiv.net/*
+// @match          https://www.pixiv.net/*
+// @license        GPL-3.0
+// @icon           https://www.google.com/s2/favicons?domain=pixiv.net
+// @grant          none
+// @updateURL      https://raw.githubusercontent.com/solact/pixiv-faview/main/pixiv-faview.user.js
 // @noframes
 // ==/UserScript==
 
