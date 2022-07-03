@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name           Pixiv Faview
 // @namespace      https://solact.blogspot.com/
-// @version        0.1
-// @description    Can view how many favs you have on a specific artist.
-// @description:ja 作者ごとの作品一覧ページで、あなたがお気に入りに追加した作品の数とリストを表示します。
+// @version        0.2
+// @description    Automatically adds links to your favorite works on a specific artist page(/users/xxxxxxxx).
+// @description:ja 作者ごとの作品一覧ページ(/users/xxxxxxxx)で、自分がお気に入りに追加した作品へのリンクを自動で追加します。
 // @author         Solact
 // @include        https://www.pixiv.net/*
 // @match          https://www.pixiv.net/*
